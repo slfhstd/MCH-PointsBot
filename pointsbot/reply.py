@@ -158,7 +158,7 @@ def footer(feedback_url=None, scoreboard_url=None):
     if feedback_url:
         # https://forms.gle/m94aGjFQwGopqQ836
         footer_sections.append(f'^[Feedback]({feedback_url})')
-    footer_sections.append('^[Source](https://github.com/cur33/PointsBot)')
+    footer_sections.append('^[Source](https://github.com/slfhstd/MCH-PointsBot)')
 
     return ' ^| '.join(footer_sections)
 
