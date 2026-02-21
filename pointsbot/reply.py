@@ -151,14 +151,14 @@ def divider():
 
 
 def footer(feedback_url=None, scoreboard_url=None):
-    footer_sections = ['^(Bot maintained by GlipGlorp7)']
+    footer_sections = ['^(Official MinecraftHelp Bot)']
     if scoreboard_url:
         # https://points.minecrafthelp.co.uk
-        footer_sections.append(f'[^Scoreboard]({scoreboard_url})')
+        footer_sections.append(f'^[Scoreboard]({scoreboard_url})')
     if feedback_url:
         # https://forms.gle/m94aGjFQwGopqQ836
-        footer_sections.append(f'[^Feedback]({feedback_url})')
-    footer_sections.append('[^Source Code](https://github.com/cur33/PointsBot)')
+        footer_sections.append(f'^[Feedback]({feedback_url})')
+    footer_sections.append('^[Source](https://github.com/cur33/PointsBot)')
 
     return ' ^| '.join(footer_sections)
 
