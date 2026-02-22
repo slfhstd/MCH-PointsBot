@@ -14,8 +14,8 @@ from . import config, database, level, reply
 USER_AGENT = 'PointsBot (by u/GlipGlorp7)'
 
 # The pattern that determines whether a post is marked as solved
-SOLVED_PATTERN = re.compile('![Hh]elped')
-MOD_SOLVED_PATTERN = re.compile('/[Hh]elped')
+SOLVED_PATTERN = re.compile('!([Hh]elped|[Ss]olved)')
+MOD_SOLVED_PATTERN = re.compile('/([Hh]elped|[Ss]olved)')
 MOD_REMOVE_PATTERN = re.compile('/[Rr]emove[Pp]oint')
 
 
