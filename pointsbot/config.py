@@ -176,7 +176,7 @@ def interactive_config(dest):
     print('\nNote that at the moment, providing a level points value of zero will not set a '
           'default flair, because users must solve at least one issue before the bot will keep '
           'track of their points and set their flair for the first time.')
-    print('\nFor any more questions, please refer to the README on the Github page.')
+    print('\nFor any more questions, please refer to the README on the Github page. https://github.com/slfhstd/MCH-PointsBot')
 
     response = 'y'
     while response.lower().startswith('y'):
