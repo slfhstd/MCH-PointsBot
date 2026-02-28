@@ -17,23 +17,43 @@ PointsBot is a Reddit bot that monitors posts in a subreddit, awards points to u
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-### Steps
+### (Easy) Use a prebuilt image
+
+1. Create a docker-compose.yml file in your chosen directoy, with the following contents:
+
+```yaml
+   services:
+     pointsbot:
+       image: slfhstd.uk/slfhstd/pointsbot:latest
+       container_name: pointsbot
+       volumes:
+         - ./data:/root/.pointsbot
+       restart: unless-stopped
+   ```
+
+2. Configure the bot:
+   - Pre-create the config file using the sample config.
+
+3. Start the bot:
+   ```bash
+   docker-compose up -d
+   ```
+
+### (Advanced) Build your own image
+
 1. Clone this repository:
    ```bash
-   git clone https://github.com/slfhstd/MCH-PointsBot.git
-   cd MCH-PointsBot
+   git clone https://slfhstd.uk/slfhstd/PointsBot.git
+   cd PointsBot
    ```
 2. Create a `docker-compose.yml` file in the project root with the following content:
    ```yaml
-   version: '3.8'
    services:
      pointsbot:
        build: .
        container_name: pointsbot
-       environment:
-         - PYTHONUNBUFFERED=1
        volumes:
-         - ./.pointsbot:/root/.pointsbot
+         - ./data:/root/.pointsbot
        restart: unless-stopped
    ```
 3. Configure the bot:
