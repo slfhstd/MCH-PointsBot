@@ -159,8 +159,7 @@ def footer(feedback_url=None, scoreboard_url=None):
         # https://forms.gle/m94aGjFQwGopqQ836
         footer_sections.append(f'^[Feedback]({feedback_url})')
     footer_sections.append('^[Source](https://slfhstd.uk/slfhstd/PointsBot)')
-    footer_sections.append('\n\n ---')
-    footer_sections.append('\n\n ^I ^am ^a ^bot. ^[Message the mods](https://www.reddit.com/message/compose?to=%2Fr%2Fminecrafthelp) ^if ^i ^am ^acting ^up.')
+    footer_sections.append('\n\n ^I ^am ^a ^bot ^and ^this ^account ^is ^not ^monitored. ^Please ^contact ^the ^mods ^if ^you ^have ^any ^questions.')
 
     return ' ^| '.join(footer_sections)
 
