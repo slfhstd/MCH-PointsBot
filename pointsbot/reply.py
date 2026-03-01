@@ -151,7 +151,7 @@ def divider():
 
 
 def footer(feedback_url=None, scoreboard_url=None):
-    footer_sections = ['^(Official MinecraftHelp Bot)']
+    footer_sections = ['^(Links:)']
     if scoreboard_url:
         # https://points.minecrafthelp.co.uk
         footer_sections.append(f'^[Scoreboard]({scoreboard_url})')
@@ -159,7 +159,8 @@ def footer(feedback_url=None, scoreboard_url=None):
         # https://forms.gle/m94aGjFQwGopqQ836
         footer_sections.append(f'^[Feedback]({feedback_url})')
     footer_sections.append('^[Source](https://slfhstd.uk/slfhstd/PointsBot)')
-    footer_sections.append('\n\n ^I ^am ^a ^bot, ^and ^this ^action ^was ^performed ^automatically.')
+    footer_sections.append('\n\n ---')
+    footer_sections.append('\n\n ^I ^am ^a ^bot. ^[Message the mods](https://www.reddit.com/message/compose?to=%2Fr%2Fminecrafthelp) ^if ^i ^am ^acting ^up.')
 
     return ' ^| '.join(footer_sections)
 
